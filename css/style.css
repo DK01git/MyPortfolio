@@ -1496,3 +1496,163 @@ footer .credits a {
     margin: 0.2rem 0;
   }
 }
+
+/* Career Milestones Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #0078ff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: #0078ff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 0;
+  box-shadow: 0 0 0 4px rgba(0, 120, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px rgba(0, 120, 255, 0.3);
+}
+
+.timeline-content {
+  width: calc(50% - 40px);
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px;
+  color: #0078ff;
+  font-size: 1.2em;
+}
+
+.timeline-content h4 {
+  margin: 0 0 10px;
+  color: #666;
+  font-size: 1em;
+}
+
+.timeline-date {
+  color: #0078ff;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode styles for timeline */
+[data-theme="dark"] .timeline-content {
+  background: #1a1a1a;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .timeline-content h3 {
+  color: #0078ff;
+}
+
+[data-theme="dark"] .timeline-content h4,
+[data-theme="dark"] .timeline-content p {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .timeline-item:nth-child(odd) .timeline-content::before {
+  border-color: transparent #1a1a1a transparent transparent;
+}
+
+[data-theme="dark"] .timeline-item:nth-child(even) .timeline-content::before {
+  border-color: transparent transparent transparent #1a1a1a;
+}
+
+/* Responsive styles for timeline */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-dot {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content::before,
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -10px;
+    right: auto;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  [data-theme="dark"] .timeline-item:nth-child(odd) .timeline-content::before,
+  [data-theme="dark"] .timeline-item:nth-child(even) .timeline-content::before {
+    border-color: transparent #1a1a1a transparent transparent;
+  }
+}
