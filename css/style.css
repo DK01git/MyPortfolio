@@ -631,16 +631,47 @@ a:hover {
   color: #4e4e4e;
 }
 
+/* Modern Gradient Skill Bars */
 .skill-mf .progress {
-  background-color: #cde1f8;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  border-radius: 20px;
+  height: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+  overflow: hidden;
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #0078ff;
+.skill-mf .progress-bar {
+  background: linear-gradient(90deg, #0078ff 0%, #00c6ff 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 8px 2px rgba(0,120,255,0.15);
+  height: 100%;
+  transition: width 1.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+  animation: skillbar-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes skillbar-glow {
+  0% { box-shadow: 0 0 8px 2px rgba(0,120,255,0.15); }
+  100% { box-shadow: 0 0 18px 6px rgba(0,198,255,0.25); }
+}
+
+.skill-mf span {
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .skill-mf .progress {
+  background: linear-gradient(90deg, #232526 0%, #2c3e50 100%);
+}
+
+[data-theme="dark"] .skill-mf .progress-bar {
+  background: linear-gradient(90deg, #00c6ff 0%, #0078ff 100%);
+  box-shadow: 0 0 12px 3px rgba(0,198,255,0.18);
+}
+
+[data-theme="dark"] .skill-mf span {
+  color: #fff;
 }
 
 /*======================================
@@ -1655,4 +1686,45 @@ footer .credits a {
   [data-theme="dark"] .timeline-item:nth-child(even) .timeline-content::before {
     border-color: transparent #1a1a1a transparent transparent;
   }
+}
+
+/* CV Download Button Styles */
+.cv-download {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.cv-download .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  background: #0078ff;
+  color: #fff;
+  border: 2px solid #0078ff;
+}
+
+.cv-download .button:hover {
+  background: transparent;
+  color: #0078ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 120, 255, 0.3);
+}
+
+.cv-download .button i {
+  font-size: 1.2em;
+}
+
+/* Dark mode styles for CV download button */
+[data-theme="dark"] .cv-download .button {
+  background: #0078ff;
+  color: #fff;
+  border-color: #0078ff;
+}
+
+[data-theme="dark"] .cv-download .button:hover {
+  background: transparent;
+  color: #0078ff;
 }
