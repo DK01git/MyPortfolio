@@ -35,6 +35,20 @@
   <link rel="preload" href="img/bg_image_1.png" as="image">
   <link rel="preload" href="img/my2.jpg" as="image">
   
+  <!-- Immediate theme application to prevent flash -->
+  <script>
+    // Set dark theme immediately to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (!savedTheme) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    })();
+  </script>
+  
   <!-- =======================================================
     Theme Name: DevFolio
     Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
@@ -104,12 +118,12 @@
             <span class="text-slider-items" aria-label="Professional roles">Associate Data Engineer,GOLD - Microsoft Student Ambassador,Passionate Learner,AI and ML Enthusiast</span>
             <strong class="text-slider" aria-live="polite"></strong>
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg js-scroll" href="#about" role="button">
-              Learn More
-              <i class="fa fa-arrow-down" aria-hidden="true"></i>
-            </a>
-          </div>
+                      <div class="hero-actions">
+              <a class="btn btn-primary btn-lg js-scroll" href="#about" role="button">
+                Explore My Journey
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </a>
+            </div>
         </div>
       </div>
     </div>
@@ -816,6 +830,15 @@
     <div class="achievements-overlay"></div>
     <div class="container">
       <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-header">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <p class="section-subtitle">My professional certifications and achievements that showcase my expertise and commitment to continuous learning.</p>
+            <div class="section-divider"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
         <div class="col-lg-10">
           <div id="achievements-carousel" class="owl-carousel owl-theme">
             <div class="achievement-card">
@@ -825,7 +848,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Earned the Google Data Analyst Professional Certificate, mastering in-demand skills while completing real-world use cases for data analysis.
+                  Earned the Google Data Analyst Professional Certificate mastering in-demand skills while completing real-world use cases for data analysis.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -838,7 +861,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Successfully passed Microsoft Azure Fundamentals exam (AZ-900), solidifying my foundation in Azure Cloud Solutions.
+                  Successfully passed Microsoft Azure Fundamentals exam (AZ-900) solidifying my foundation in Azure Cloud Solutions.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -851,7 +874,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Aced the Microsoft Azure AI Fundamentals exam (AI-900), solidifying my foundation in AI solutions with Azure Cloud Solutions.
+                  Aced the Microsoft Azure AI Fundamentals exam (AI-900) solidifying my foundation in AI solutions with Azure Cloud Solutions.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -864,7 +887,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Successfully passed Microsoft Azure Data Fundamentals exam (DP-900), sharpening Data Analytics concepts and tools in Azure Cloud.
+                  Successfully passed Microsoft Azure Data Fundamentals exam (DP-900) sharpening Data Analytics concepts and tools in Azure Cloud.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -877,7 +900,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Achieved GOLD level as a Microsoft Student Ambassador, empowering communities with Microsoft technologies and mentoring future leaders with technical skills.
+                  Achieved GOLD level as a Microsoft Student Ambassador empowering communities with Microsoft technologies and mentoring future leaders with technical skills.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -890,7 +913,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Levelled up as a Microsoft Student Ambassador (Beta), empowering others with tech skills. Gained lots of experience in Microsoft based Products and build Leadership skills.
+                  Levelled up as a Microsoft Student Ambassador (Beta) empowering others with tech skills. Gained lots of experience in Microsoft based Products and build Leadership skills.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -903,7 +926,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Graduated from the Power Up Program, gaining advanced skills in Microsoft Power Platform, and applying them to real-world scenarios.
+                  Graduated from the Power Up Program gaining advanced skills in Microsoft Power Platform and applying them to real-world scenarios.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
@@ -929,7 +952,7 @@
               </div>
               <div class="achievement-content">
                 <p class="achievement-description">
-                  Led the University's AI & Data Science Club, fostering a community passionate about AI and data exploration.
+                  Led the University's AI & Data Science Club fostering a community passionate about AI and data exploration.
                 </p>
                 <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>

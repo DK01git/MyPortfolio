@@ -19,6 +19,7 @@ class PortfolioPortfolio {
     this.setupAnimations();
     this.initCounters(); // Add counter initialization
     this.initTypingAnimation(); // Add typing animation
+    this.initOwlCarousel(); // Add Owl Carousel initialization
   }
 
   // Set default theme to dark
@@ -339,6 +340,56 @@ class PortfolioPortfolio {
       }
       element.textContent = Math.floor(current);
     }, stepDuration);
+  }
+
+  initOwlCarousel() {
+    // Check if Owl Carousel is available
+    if (typeof $.fn.owlCarousel === 'undefined') {
+      console.log('Owl Carousel not loaded, using fallback display');
+      return;
+    }
+
+    const achievementsCarousel = document.getElementById('achievements-carousel');
+    if (!achievementsCarousel) return;
+
+    $(achievementsCarousel).owlCarousel({
+      loop: true,
+      margin: 30, // Increased margin for better spacing
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 4000, // Reduced from 5000 to 4000 for faster scrolling
+      autoplayHoverPause: true,
+      autoplaySpeed: 1000, // Added smooth autoplay speed
+      navSpeed: 600, // Added smooth navigation speed
+      dotsSpeed: 600, // Added smooth dots transition
+      navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+      smartSpeed: 1000, // Added smart speed for smooth transitions
+      responsive: {
+        0: {
+          items: 1,
+          margin: 15,
+          autoplayTimeout: 3000 // Faster on mobile
+        },
+        600: {
+          items: 2,
+          margin: 20,
+          autoplayTimeout: 3500
+        },
+        1000: {
+          items: 3,
+          margin: 30,
+          autoplayTimeout: 4000
+        }
+      }
+    });
+
+    // Add pause on hover functionality
+    $(achievementsCarousel).on('mouseenter', function() {
+      $(this).trigger('stop.owl.autoplay');
+    }).on('mouseleave', function() {
+      $(this).trigger('play.owl.autoplay');
+    });
   }
 }
 
