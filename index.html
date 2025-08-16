@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Diluksha Perera Portfolio</title>
+  <title>Diluksha Perera - Data Engineer & AI Enthusiast</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
+  <meta content="Data Engineer, AI, Machine Learning, Azure, Data Science" name="keywords">
+  <meta content="Diluksha Perera is a passionate Data Engineer and AI enthusiast with expertise in Azure Cloud Services, Machine Learning, and Data Visualization." name="description">
+  <meta name="author" content="Diluksha Perera">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Diluksha Perera - Data Engineer & AI Enthusiast">
+  <meta property="og:description" content="Passionate Data Engineer with expertise in Azure Cloud Services, Machine Learning, and Data Visualization">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  
   <!-- Favicons -->
-  <link href="img/logoS.png" rel="icon">
+  <link href="img/logoS.png" rel="icon" type="image/png">
   <link href="img/logoBig.png" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
@@ -22,7 +29,11 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-modern.css" rel="stylesheet">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="img/bg_image_1.png" as="image">
+  <link rel="preload" href="img/my2.jpg" as="image">
   
   <!-- =======================================================
     Theme Name: DevFolio
@@ -32,28 +43,30 @@
   ======================================================= -->
 </head>
 
-<body id="page-top">
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
 
-  <!--/ Nav Star /-->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+  <!--/ Navigation Star /-->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">DilukshaPerera</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+      <a class="navbar-brand js-scroll" href="#page-top" aria-label="Go to top of page">
+        <span class="brand-text">DilukshaPerera</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Home</a>
+            <a class="nav-link js-scroll active" href="#home" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Expertice</a>
+            <a class="nav-link js-scroll" href="#service">Expertise</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#work">Projects</a>
@@ -71,1117 +84,1096 @@
       </div>
     </div>
   </nav>
-  <!--/ Nav End /-->
+  <!--/ Navigation End /-->
 
-  <!-- Add after navbar -->
+  <!-- Theme Toggle Button -->
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-    <i class="fa fa-moon-o"></i>
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <span class="sr-only">Toggle dark mode</span>
   </button>
 
-  <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/bg_image_1.png)">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">I'm Diluksha Perera</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Associate Data Engineer,Applied Data Science Undergraduate,Passionate Learner,AI and ML Enthusiast</span><strong class="text-slider"></strong></p>
-          <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> 
+  <!--/ Hero Section Star /-->
+  <section id="home" class="hero-section" aria-labelledby="hero-title">
+    <div class="hero-background" style="background-image: url(img/bg_image_1.png)" role="img" aria-label="Background image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-text-wrapper">
+          <h1 class="hero-title" id="hero-title">I'm Diluksha Perera</h1>
+          <p class="hero-subtitle">
+            <span class="text-slider-items" aria-label="Professional roles">Associate Data Engineer,GOLD - Microsoft Student Ambassador,Passionate Learner,AI and ML Enthusiast</span>
+            <strong class="text-slider" aria-live="polite"></strong>
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg js-scroll" href="#about" role="button">
+              Learn More
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <!--/ Hero Section End /-->
 
-  <!--/ Intro Skew End /-->
-
-  <!--- My image Start ---->
-  <section id="about" class="about-mf sect-pt4 route">
+  <!--/ About Section Star /-->
+  <section id="about" class="about-section section-padding" aria-labelledby="about-title">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-            <div class="row">
-              <div class="col-md-6">
-              <div class="row">
-              <div class="col-sm-6 col-md-5">
-              <div class="about-img">
-          <img src="img/my2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="about-card">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="about-image-section">
+                  <div class="about-image-wrapper">
+                    <img src="img/my2.jpg" class="about-image" alt="Diluksha Perera - Professional headshot" loading="lazy">
+                  </div>
+                  <div class="about-info">
+                    <div class="info-item">
+                      <span class="info-label">Name:</span>
+                      <span class="info-value">Diluksha Perera</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Profile:</span>
+                      <span class="info-value">Data Science Undergraduate</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email:</span>
+                      <span class="info-value">39-adc-0025@kdu.ac.lk</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone:</span>
+                      <span class="info-value">+94 77 1916256</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skills-section">
+                  <h3 class="skills-title">Programming Skills</h3>
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Python</span>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Azure Cloud Services for Data Engineering</span>
+                      <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">Power Platform</span>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">R Studio</span>
+                      <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item">
+                    <div class="skill-header">
+                      <span class="skill-name">MS-SQL</span>
+                      <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6">
+                <div class="about-content">
+                  <h2 class="section-title" id="about-title">About me</h2>
+                  <div class="about-text">
+                    <p class="lead">
+                      I am a highly motivated undergraduate and Data Engineer with a strong foundation in data visualization, machine learning, and programming languages like Python and R. As a Microsoft Student Ambassador, I am eager to leverage my knowledge and gain valuable real-world experience in the field of data science.
+                    </p>
+                    <p class="lead">
+                      Passionate about tackling complex problems through data analysis, I excel at uncovering insights and crafting compelling visualizations. I am excited about continuous learning and growth, constantly seeking new challenges to contribute my skills and make a positive impact.
+                    </p>
+                  </div>
+                  <div class="cv-download">
+                    <a href="img/DPerera_CV .pdf" class="btn btn-outline-primary btn-lg" download>
+                      <i class="fa fa-download" aria-hidden="true"></i>
+                      Download CV
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-7">
-        <div class="about-info">
-          <p><span class="title-s">Name: </span> <span>Diluksha Perera</span></p>
-          <p><span class="title-s">Profile: </span> <span>Data Science Undergraduate</span></p>
-          <p><span class="title-s">Email: </span> <span>39-adc-0025@kdu.ac.lk</span></p>
-          <p><span class="title-s">Phone: </span> <span>071-1916256</span></p>
-        </div>
-      </div>
     </div>
-    <div class="skill-mf">
-      <p class="title-s">Programming Skills</p>
-      <span>Python</span> <span class="pull-right">80%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-      <span>Azure Cloud Services for Data Engineering</span> <span class="pull-right">75%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-      <span>Power Platform</span> <span class="pull-right">85%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-      <span>R Studio</span> <span class="pull-right">70%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-      <span>MS-SQL</span> <span class="pull-right">75%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-          aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="about-me pt-4 pt-md-0">
-      <div class="title-box-2">
-        <h5 class="title-left">
-          About me
-        </h5>
-      </div>
-      <p class="lead">
-        I am a highly motivated undergraduate and Data Engineer with a strong foundation in data visualization, machine learning, and programming languages like Python and R. As a Microsoft Student Ambassador, I am eager to leverage my knowledge and gain valuable real-world experience in the field of data science.
-      </p>
-      <p class="lead">
-        Passionate about tackling complex problems through data analysis, I excel at uncovering insights and crafting compelling visualizations. I am excited about continuous learning and growth, constantly seeking new challenges to contribute my skills and make a positive impact.
-      </p>
-      <div class="cv-download">
-        <a href="img/DPerera_CV .pdf" class="button button-a button-big button-rouded" download>
-          <i class="fa fa-download"></i> Download CV
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  </section>
+  <!--/ About Section End /-->
 
-  <!--/ Section Services Star /-->
-  <section id="service" class="services-mf route">
+  <!--/ Expertise Section Star /-->
+  <section id="service" class="expertise-section section-padding" aria-labelledby="expertise-title">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Expertise
-            </h3>
-            <p class="subtitle-a">
-              These are the fields that I'm passionate in.
-            </p>
-            <div class="line-mf"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-header">
+            <h2 class="section-title" id="expertise-title">Expertise</h2>
+            <p class="section-subtitle">These are the fields that I'm passionate in.</p>
+            <div class="section-divider"></div>
           </div>
         </div>
       </div>
-      <div class="row">
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-              <span class="ico-circle"><i class="ion-android-bulb"></i></span>
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="ion-android-bulb" aria-hidden="true"></i>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">AI Frameworks</h2>
-            <p class="s-description text-center">
-              I work with AI frameworks like TensorFlow, PyTorch, and Keras to build and deploy intelligent systems, enhancing data-driven decision-making.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-cloud"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Cloud Computing</h2>
-            <p class="s-description text-center">
-              Leveraging Responsible AI, I've Experienced in Azure cloud solutions. I design and manage applications on Microsoft's scalable cloud platform.
-            </p>
-          </div>
-        </div>
-      </div>
-
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-stats-bars"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">Data Visualization</h2>
-              <p class="s-description text-center">
-                Unleash data's story! I craft clear, informative visuals that make complex information sing for technical and non-technical audiences alike. 
+            <div class="expertise-content">
+              <h3 class="expertise-title">AI Frameworks</h3>
+              <p class="expertise-description">
+                I work with AI frameworks like TensorFlow, PyTorch, and Keras to build and deploy intelligent systems, enhancing data-driven decision-making.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-code-working"></i></span>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="ion-cloud" aria-hidden="true"></i>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Machine Learning</h2>
-              <p class="s-description text-center">
+            <div class="expertise-content">
+              <h3 class="expertise-title">Cloud Computing</h3>
+              <p class="expertise-description">
+                Leveraging Responsible AI, I've experienced in Azure cloud solutions. I design and manage applications on Microsoft's scalable cloud platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="ion-stats-bars" aria-hidden="true"></i>
+            </div>
+            <div class="expertise-content">
+              <h3 class="expertise-title">Data Visualization</h3>
+              <p class="expertise-description">
+                Unleash data's story! I craft clear, informative visuals that make complex information sing for technical and non-technical audiences alike.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="ion-code-working" aria-hidden="true"></i>
+            </div>
+            <div class="expertise-content">
+              <h3 class="expertise-title">Machine Learning</h3>
+              <p class="expertise-description">
                 I can wrangle data to make it learn! Skilled in machine learning techniques to build models that solve problems and uncover hidden insights.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-refresh"></i></span>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="ion-refresh" aria-hidden="true"></i>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Data Cleansing</h2>
-              <p class="s-description text-center">
-                Data whisperer! I transform messy data into clean, usable sets for analysis and visualization. Skilled in tools such as Python and R-Studio</a>.
+            <div class="expertise-content">
+              <h3 class="expertise-title">Data Cleansing</h3>
+              <p class="expertise-description">
+                Data whisperer! I transform messy data into clean, usable sets for analysis and visualization. Skilled in tools such as Python and R-Studio.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="ion-android-phone-portrait" aria-hidden="true"></i>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Automative Process</h2>
-              <p class="s-description text-center">
-                Experienced in automating repitive tasks with Power Automate. I automate workflows to streamline processes, saving your time and effort.
+            <div class="expertise-content">
+              <h3 class="expertise-title">Automative Process</h3>
+              <p class="expertise-description">
+                Experienced in automating repetitive tasks with Power Automate. I automate workflows to streamline processes, saving your time and effort.
               </p>
             </div>
           </div>
         </div>
-        
-        
       </div>
     </div>
   </section>
-  <!--/ Section Services End /-->
+  <!--/ Expertise Section End /-->
 
-  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
-    <div class="overlay-mf"></div>
+  <!--/ Stats Section Star /-->
+  <section class="stats-section section-padding" aria-label="Statistics">
+    <div class="stats-background" style="background-image: url(img/counters-bg.jpg)" role="img" aria-label="Statistics background"></div>
+    <div class="stats-overlay"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="ion-checkmark-round" aria-hidden="true"></i>
             </div>
-            <div class="counter-num">
-              <p class="counter">32</p>
-              <span class="counter-text">PROJECTS COMPLETED</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">2</p>
-              <span class="counter-text">YEARS OF EXPERIENCE</span>
+            <div class="stat-content">
+              <div class="stat-number" data-count="32">0</div>
+              <div class="stat-label">PROJECTS COMPLETED</div>
             </div>
           </div>
         </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-people"></i></span>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="ion-ios-calendar-outline" aria-hidden="true"></i>
             </div>
-            <div class="counter-num">
-              <p class="counter">60</p>
-              <span class="counter-text">WORKED TEAMMATES</span>
+            <div class="stat-content">
+              <div class="stat-number" data-count="2">0</div>
+              <div class="stat-label">YEARS OF EXPERIENCE</div>
             </div>
           </div>
         </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="ion-ios-people" aria-hidden="true"></i>
             </div>
-            <div class="counter-num">
-              <p class="counter">65</p>
-              <span class="counter-text">ACHIEVMENTS OBTAINED</span>
+            <div class="stat-content">
+              <div class="stat-number" data-count="60">0</div>
+              <div class="stat-label">WORKED TEAMMATES</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="ion-ribbon-a" aria-hidden="true"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-count="65">0</div>
+              <div class="stat-label">ACHIEVEMENTS OBTAINED</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <!--/ Stats Section End /-->
 
   <!--/ Section Portfolio Star /-->
-  <section id="work" class="portfolio-mf sect-pt4 route">
+  <section id="work" class="projects-section section-padding" aria-labelledby="projects-title">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              PROJECTS
-            </h3>
-            <p class="subtitle-a">
-              Checkout some real world projects that I have done as an individual and beign team mate.
-            </p>
-            <div class="line-mf"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-header">
+            <h2 class="section-title" id="projects-title">Projects</h2>
+            <p class="section-subtitle">Check out some real world projects that I have done as an individual and being a team mate.</p>
+            <div class="section-divider"></div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/EuobPL9WP89FnwqfNz8TCyoBVW0eZCN6yTP78o-zvHe5Mg?e=aj0j2b" target="_blank" rel="noopener">
-              <div class="work-img">
-                <img src="img/p1.png" alt="" class="img-fluid">
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/EuobPL9WP89FnwqfNz8TCyoBVW0eZCN6yTP78o-zvHe5Mg?e=aj0j2b" target="_blank" rel="noopener" aria-label="View Scottish Energy Performance Analysis project">
+              <div class="project-image">
+                <img src="img/p1.png" alt="Scottish Energy Performance Analysis project preview" class="img-fluid" loading="lazy">
               </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Scottish Energy Performance Analysis</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Data Visualization</span> / <span class="w-date">18 Dec.2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Scottish Energy Performance Analysis</h3>
+                  <div class="project-meta">
+                    <span class="project-category">Data Visualization</span>
+                    <span class="project-date">18 Dec. 2023</span>
                   </div>
                 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/ErtJ4DEB0l9PrfmgdF41aPQBIaNdQIqDdz4_45sGfzvtjg?e=fkoPRH" target="_blank" rel="noopener">
-              <div class="work-img">
-                <img src="img/p2.jpeg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Sales Analysis and Visualization</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Data Visualization</span> / <span class="w-date">04 Jan. 2024</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/EuKmGzJ9V_JFjxEdFKoPSlYBZuI8AyQubQKrWdBdSgx6Uw?e=c553jh" target="_blank" rel="noopener">
-              <div class="work-img">
-                <img src="img/p3.jpeg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Market Prediction for festival Seoson</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Data Storytelling</span> / <span class="w-date">02 Feb. 2024</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="https://github.com/DK01git/Flight_Punctaulity_prediction_ANN" target="_blank" rel="noopener">
-              <div class="work-img">
-                <img src="img/p4.jpeg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Flight Punctaulity prediction using ANN</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Machine Learning</span> / <span class="w-date">20 Feb. 2024</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/En6_G8f8-zlJnHQ-Vy4U_4MBVTcTmHJxVwl_c6PGMpy8TQ?e=B25ZB2" target="_blank" rel="noopener">
-              <div class="work-img">
-                <img src="img/p5.jpeg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Greater Manchester Higher Education Analyzer</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">EDA</span> / <span class="w-date">21 Sep. 2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/EjZ_DmZjO_pMsIKHnkQYd6oBoljAGJiXYmF7wHiTv49gUw?e=zigaRh" target="_blank" rel="noopener">
-              <div class="work-img">
-                <img src="img/p6.jpeg" alt="" class="img-fluid">
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">UFC Players Performance Analysis</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">EDA</span> / <span class="w-date">13 June. 2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <span class="ion-ios-plus-outline"></span>
-                    </div>
-                  </div>
+                <div class="project-action">
+                  <i class="ion-ios-plus-outline" aria-hidden="true"></i>
                 </div>
               </div>
             </a>
           </div>
         </div>
         
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/ErtJ4DEB0l9PrfmgdF41aPQBIaNdQIqDdz4_45sGfzvtjg?e=fkoPRH" target="_blank" rel="noopener" aria-label="View Sales Analysis and Visualization project">
+              <div class="project-image">
+                <img src="img/p2.jpeg" alt="Sales Analysis and Visualization project preview" class="img-fluid" loading="lazy">
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Sales Analysis and Visualization</h3>
+                  <div class="project-meta">
+                    <span class="project-category">Data Visualization</span>
+                    <span class="project-date">04 Jan. 2024</span>
+                  </div>
+                </div>
+                <div class="project-action">
+                  <i class="ion-ios-plus-outline" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/EuKmGzJ9V_JFjxEdFKoPSlYBZuI8AyQubQKrWdBdSgx6Uw?e=c553jh" target="_blank" rel="noopener" aria-label="View Market Prediction for Festival Season project">
+              <div class="project-image">
+                <img src="img/p3.jpeg" alt="Market Prediction for Festival Season project preview" class="img-fluid" loading="lazy">
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Market Prediction for Festival Season</h3>
+                  <div class="project-meta">
+                    <span class="project-category">Data Storytelling</span>
+                    <span class="project-date">02 Feb. 2024</span>
+                  </div>
+                </div>
+                <div class="project-action">
+                  <i class="ion-ios-plus-outline" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <a href="https://github.com/DK01git/Flight_Punctaulity_prediction_ANN" target="_blank" rel="noopener" aria-label="View Flight Punctuality Prediction using ANN project on GitHub">
+              <div class="project-image">
+                <img src="img/p4.jpeg" alt="Flight Punctuality Prediction using ANN project preview" class="img-fluid" loading="lazy">
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Flight Punctuality Prediction using ANN</h3>
+                  <div class="project-meta">
+                    <span class="project-category">Machine Learning</span>
+                    <span class="project-date">20 Feb. 2024</span>
+                  </div>
+                </div>
+                <div class="project-action">
+                  <i class="ion-ios-plus-outline" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/En6_G8f8-zlJnHQ-Vy4U_4MBVTcTmHJxVwl_c6PGMpy8TQ?e=B25ZB2" target="_blank" rel="noopener" aria-label="View Greater Manchester Higher Education Analyzer project">
+              <div class="project-image">
+                <img src="img/p5.jpeg" alt="Greater Manchester Higher Education Analyzer project preview" class="img-fluid" loading="lazy">
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Greater Manchester Higher Education Analyzer</h3>
+                  <div class="project-meta">
+                    <span class="project-category">EDA</span>
+                    <span class="project-date">21 Sep. 2023</span>
+                  </div>
+                </div>
+                <div class="project-action">
+                  <i class="ion-ios-plus-outline" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <a href="https://kduac-my.sharepoint.com/:f:/g/personal/39-adc-0025_kdu_ac_lk/EjZ_DmZjO_pMsIKHnkQYd6oBoljAGJiXYmF7wHiTv49gUw?e=zigaRh" target="_blank" rel="noopener" aria-label="View UFC Players Performance Analysis project">
+              <div class="project-image">
+                <img src="img/p6.jpeg" alt="UFC Players Performance Analysis project preview" class="img-fluid" loading="lazy">
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">UFC Players Performance Analysis</h3>
+                  <div class="project-meta">
+                    <span class="project-category">EDA</span>
+                    <span class="project-date">13 June. 2023</span>
+                  </div>
+                </div>
+                <div class="project-action">
+                  <i class="ion-ios-plus-outline" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!--/ Section projcts End /-->
+  <!--/ Section Projects End /-->
 
-
-  <!--/ Events /-->
-
-<section id="events" class="events-mf sect-pt4 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
-            Events
-          </h3>
-          <p class="subtitle-a">
-            Checkout some events that I have hosted.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- First Row of Images -->
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/az900.png" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Azure Fundamental Cloud Skill challenges</h3>
-            <p class="event-description">Hosted a series of challenges to help students on Azure cloud services</p>
-            </div>
-          
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/kdupp.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Introduction to Power Platform and Power Automate</h3>
-            <p class="event-description">Empowering users to automate workflows and streamline business processes with Power Platform</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/dp9.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Azure Data Fundamental Cloud Skill challenges</h3>
-            <p class="event-description">Conducted a series of challenges to enhance students' skills in Azure data services and fundamentals</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Second Row of Images -->
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/cmpApril.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Microsoft Student Champ - April</h3>
-            <p class="event-description">Able to showcase the innovation in technology and share it with tech enthusiasts</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/clcmpeasy.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Tech Trio</h3>
-            <p class="event-description">Demystifying Cloud Computing and Azure for Beginners</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/kdubuild.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Microsoft Build After Party</h3>
-            <p class="event-description">Networkd with fellow enthusiasts at the Build After Party: KDU edition, shared innovation</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Third Row of Images -->
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/heart1.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Hearts Talk at Bistec</h3>
-            <p class="event-description">Engaging in insightful discussions on Power Automate and AI Builder at Bistec Global Services' Hearts Talk event.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/heart2.png" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Hearts Talk at Bistec</h3>
-            <p class="event-description">Delving into the intricacies of Power Apps deployment pipelines at Bistec Global Services' Hearts Talk event</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/ppc.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Power Platform Community - October</h3>
-            <p class="event-description">Shared knowledge at the Power Platform Community as one of the speaker</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Fourth Row of Images -->
-       <!-- forth row first column-->
-      <div class="col-md-4">
-        <div class="event-box">
-          <div class="event-img">
-            <img src="img/speaker3.png" alt="" class="img-fluid">
-          </div>
-          <div class="event-content">
-            <h3 class="event-title">Microsoft student Champ - December</h3>
-            <p class="event-description">Sharing insights and expertise on Data Engineering as a speaker at the Microsoft Student Champ in December.</p>
-          </div>
-        </div>
-      </div>
-      <!-- forth row second column-->
-    <div class="col-md-4">
-      <div class="event-box">
-        <div class="event-img">
-          <img src="img/aiagents.jpg" alt="" class="img-fluid">
-        </div>
-        <div class="event-content">
-          <h3 class="event-title">Tech-Spark 2.0</h3>
-          <p class="event-description">Delved into the cutting-edge technology of AI agents, their capabilities, and workshop on how to create them from scratch</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- forth row third column-->
-    <div class="col-md-4">
-      <div class="event-box">
-        <div class="event-img">
-          <img src="img/MayChamp.jpg" alt="" class="img-fluid">
-        </div>
-        <div class="event-content">
-          <h3 class="event-title">Microsoft Student Champ - May</h3>
-          <p class="event-description">Able to showcase the innovation in Power Platform technology and share it with tech enthusiasts</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <!-- Most Recent Event -->
-    <div class="col-md-4">
-      <div class="event-box">
-        <div class="event-img">
-          <img src="img/uwa.jpeg" alt="" class="img-fluid">
-        </div>
-        <div class="event-content">
-          <h3 class="event-title">AI MEETS LOW-CODE: YOUR FIRST POWER APP JOURNEY STARTS HERE</h3>
-          <p class="event-description">Shared expertise on how to leverage AI agentic developmentwith Power Apps and low-code development. </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!--/ Events End /-->
-
-<!--/ Section Career Milestones Star /-->
-<section id="milestones" class="milestones-mf sect-pt4 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
-            Career Milestones
-          </h3>
-          <p class="subtitle-a">
-            My professional journey and achievements
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Associate Data Engineer</h3>
-              <h4>Bistec Global Services</h4>
-              <p class="timeline-date">2024 December- 2025 June</p>
-              <p>Leading data engineering initiatives and implementing cloud-based solutions</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Intern - Data Engineer</h3>
-              <h4>Bistec Global Services</h4>
-              <p class="timeline-date">2024 June - 2024 December</p>
-              <p>Working on data engineering projects and implementing cloud-based solutions</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Microsoft Student Ambassador - GOLD</h3>
-              <h4>Microsoft</h4>
-              <p class="timeline-date">Aug 2025 - Present</p>
-              <p>Empowering communities with Microsoft technologies and mentoring future leaders technical skills</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Microsoft Student Ambassador - Beta</h3>
-              <h4>Microsoft</h4>
-              <p class="timeline-date">2023 - Aug 2025</p>
-              <p>Empowering students with Microsoft technologies and building leadership skills</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>President - DatAInspire</h3>
-              <h4>KDU AI & Data Science Club</h4>
-              <p class="timeline-date">2023 - 2024 </p>
-              <p>Leading the university's AI & Data Science community and organizing tech events</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Applied Data Science Undergraduate</h3>
-              <h4>Kotelawala Defence University</h4>
-              <p class="timeline-date">2022 - Present</p>
-              <p>Pursuing degree with focus on data science, machine learning, and AI</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Google Certified Data Analyst</h3>
-              <h4>Google</h4>
-              <p class="timeline-date">2023</p>
-              <p>Mastered data analysis skills and completed real-world projects</p>
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ Section Career Milestones End /-->
-
-  <!--/ achievements /-->
-  <div class="testimonials paralax-mf bg-image" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
+  <!--/ Events Section Star /-->
+  <section id="events" class="events-section section-padding" aria-labelledby="events-title">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="testimonial-mf" class="owl-carousel owl-theme">
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/gda.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Google Certified Data Analyst</span>
-              </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Earned the Google Data Analyst Professional Certificate, mastering in-demand skills while completing real-world use cases for data analysis. 
-                </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-header">
+            <h2 class="section-title" id="events-title">Events</h2>
+            <p class="section-subtitle">Check out some events that I have hosted.</p>
+            <div class="section-divider"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- First Row of Events -->
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/az900.png" alt="Azure Fundamental Cloud Skill challenges event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Azure Fundamental Cloud Skill Challenges</h3>
+              <p class="event-description">Hosted a series of challenges to help students on Azure cloud services</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/kdupp.jpg" alt="Introduction to Power Platform and Power Automate event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Introduction to Power Platform and Power Automate</h3>
+              <p class="event-description">Empowering users to automate workflows and streamline business processes with Power Platform</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/dp9.jpg" alt="Azure Data Fundamental Cloud Skill challenges event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Azure Data Fundamental Cloud Skill Challenges</h3>
+              <p class="event-description">Conducted a series of challenges to enhance students' skills in Azure data services and fundamentals</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Second Row of Events -->
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/cmpApril.jpg" alt="Microsoft Student Champ - April event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Microsoft Student Champ - April</h3>
+              <p class="event-description">Able to showcase the innovation in technology and share it with tech enthusiasts</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/clcmpeasy.jpg" alt="Tech Trio event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Tech Trio</h3>
+              <p class="event-description">Demystifying Cloud Computing and Azure for Beginners</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/kdubuild.jpg" alt="Microsoft Build After Party event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Microsoft Build After Party</h3>
+              <p class="event-description">Networked with fellow enthusiasts at the Build After Party: KDU edition, shared innovation</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Third Row of Events -->
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/heart1.jpg" alt="Hearts Talk at Bistec event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Hearts Talk at Bistec</h3>
+              <p class="event-description">Engaging in insightful discussions on Power Automate and AI Builder at Bistec Global Services' Hearts Talk event.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/heart2.png" alt="Hearts Talk at Bistec event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Hearts Talk at Bistec</h3>
+              <p class="event-description">Delving into the intricacies of Power Apps deployment pipelines at Bistec Global Services' Hearts Talk event</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/ppc.jpg" alt="Power Platform Community - October event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Power Platform Community - October</h3>
+              <p class="event-description">Shared knowledge at the Power Platform Community as one of the speakers</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fourth Row of Events -->
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/speaker3.png" alt="Microsoft Student Champ - December event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Microsoft Student Champ - December</h3>
+              <p class="event-description">Sharing insights and expertise on Data Engineering as a speaker at the Microsoft Student Champ in December.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/aiagents.jpg" alt="Tech-Spark 2.0 event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Tech-Spark 2.0</h3>
+              <p class="event-description">Delved into the cutting-edge technology of AI agents, their capabilities, and workshop on how to create them from scratch</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/MayChamp.jpg" alt="Microsoft Student Champ - May event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Microsoft Student Champ - May</h3>
+              <p class="event-description">Able to showcase the innovation in Power Platform technology and share it with tech enthusiasts</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Most Recent Event -->
+        <div class="col-lg-4 col-md-6">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="img/uwa.jpeg" alt="AI MEETS LOW-CODE event" class="img-fluid" loading="lazy">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">AI MEETS LOW-CODE: YOUR FIRST POWER APP JOURNEY STARTS HERE</h3>
+              <p class="event-description">Shared expertise on how to leverage AI agentic development with Power Apps and low-code development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Events Section End /-->
+
+  <!--/ Career Milestones Section Star /-->
+  <section id="milestones" class="milestones-section section-padding" aria-labelledby="milestones-title">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-header">
+            <h2 class="section-title" id="milestones-title">Career Milestones</h2>
+            <p class="section-subtitle">My professional journey and achievements</p>
+            <div class="section-divider"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Associate Data Engineer</h3>
+                <h4>Bistec Global Services</h4>
+                <p class="timeline-date">2024 December - 2025 June</p>
+                <p>Leading data engineering initiatives and implementing cloud-based solutions</p>
               </div>
             </div>
 
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/azlogo.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Azure Fundamentals</span>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Intern - Data Engineer</h3>
+                <h4>Bistec Global Services</h4>
+                <p class="timeline-date">2024 June - 2024 December</p>
+                <p>Working on data engineering projects and implementing cloud-based solutions</p>
               </div>
-              <div class="content-test">
-                <p class="description lead">
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Microsoft Student Ambassador - GOLD</h3>
+                <h4>Microsoft</h4>
+                <p class="timeline-date">Aug 2025 - Present</p>
+                <p>Empowering communities with Microsoft technologies and mentoring future leaders technical skills</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Microsoft Student Ambassador - Beta</h3>
+                <h4>Microsoft</h4>
+                <p class="timeline-date">2023 - Aug 2025</p>
+                <p>Empowering students with Microsoft technologies and building leadership skills</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>President - DatAInspire</h3>
+                <h4>KDU AI & Data Science Club</h4>
+                <p class="timeline-date">2023 - 2024</p>
+                <p>Leading the university's AI & Data Science community and organizing tech events</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Applied Data Science Undergraduate</h3>
+                <h4>Kotelawala Defence University</h4>
+                <p class="timeline-date">2022 - Present</p>
+                <p>Pursuing degree with focus on data science, machine learning, and AI</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Google Certified Data Analyst</h3>
+                <h4>Google</h4>
+                <p class="timeline-date">2023</p>
+                <p>Mastered data analysis skills and completed real-world projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Career Milestones Section End /-->
+
+  <!--/ Achievements Section Star /-->
+  <section class="achievements-section section-padding" aria-label="Achievements and Certifications">
+    <div class="achievements-background" style="background-image: url(img/overlay-bg.jpg)" role="img" aria-label="Achievements background"></div>
+    <div class="achievements-overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div id="achievements-carousel" class="owl-carousel owl-theme">
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/gda.png" alt="Google Data Analyst certification badge" class="achievement-badge">
+                <span class="achievement-title">Google Certified Data Analyst</span>
+              </div>
+              <div class="achievement-content">
+                <p class="achievement-description">
+                  Earned the Google Data Analyst Professional Certificate, mastering in-demand skills while completing real-world use cases for data analysis.
+                </p>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/azlogo.png" alt="Azure Fundamentals certification badge" class="achievement-badge">
+                <span class="achievement-title">Azure Fundamentals</span>
+              </div>
+              <div class="achievement-content">
+                <p class="achievement-description">
                   Successfully passed Microsoft Azure Fundamentals exam (AZ-900), solidifying my foundation in Azure Cloud Solutions.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
             
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/aif.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Azure AI Fundamentals</span>
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/aif.png" alt="Azure AI Fundamentals certification badge" class="achievement-badge">
+                <span class="achievement-title">Azure AI Fundamentals</span>
               </div>
-              <div class="content-test">
-                <p class="description lead">
+              <div class="achievement-content">
+                <p class="achievement-description">
                   Aced the Microsoft Azure AI Fundamentals exam (AI-900), solidifying my foundation in AI solutions with Azure Cloud Solutions.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
 
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/dp.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Azure Data Fundamentals</span>
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/dp.png" alt="Azure Data Fundamentals certification badge" class="achievement-badge">
+                <span class="achievement-title">Azure Data Fundamentals</span>
               </div>
-              <div class="content-test">
-                <p class="description lead">
+              <div class="achievement-content">
+                <p class="achievement-description">
                   Successfully passed Microsoft Azure Data Fundamentals exam (DP-900), sharpening Data Analytics concepts and tools in Azure Cloud.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
             
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/gold2.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Microsoft Student Ambassador - GOLD</span>
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/gold2.png" alt="Microsoft Student Ambassador GOLD badge" class="achievement-badge">
+                <span class="achievement-title">Microsoft Student Ambassador - GOLD</span>
               </div>
-              <div class="content-test">
-                <p class="description lead">
+              <div class="achievement-content">
+                <p class="achievement-description">
                   Achieved GOLD level as a Microsoft Student Ambassador, empowering communities with Microsoft technologies and mentoring future leaders with technical skills.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
 
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/beta.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Microsoft Student Ambassador - Beta</span>
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/beta.png" alt="Microsoft Student Ambassador Beta badge" class="achievement-badge">
+                <span class="achievement-title">Microsoft Student Ambassador - Beta</span>
               </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Levelled up as a Microsoft Student Ambassador (Beta), empowering others with tech skills. Gained lots of experienced in Microsoft based Products and build Leadership skills.
+              <div class="achievement-content">
+                <p class="achievement-description">
+                  Levelled up as a Microsoft Student Ambassador (Beta), empowering others with tech skills. Gained lots of experience in Microsoft based Products and build Leadership skills.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
 
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/up.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Power Up Program Graduate</span>
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/up.png" alt="Power Up Program graduation badge" class="achievement-badge">
+                <span class="achievement-title">Power Up Program Graduate</span>
               </div>
-              <div class="content-test">
-                <p class="description lead"></p>
+              <div class="achievement-content">
+                <p class="achievement-description">
                   Graduated from the Power Up Program, gaining advanced skills in Microsoft Power Platform, and applying them to real-world scenarios.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
 
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/caoch.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">Azure Responsible AI Workshop - Coach</span>
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/caoch.png" alt="Azure Responsible AI Workshop Coach badge" class="achievement-badge">
+                <span class="achievement-title">Azure Responsible AI Workshop - Coach</span>
               </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Stand a chance to coached others on building responsible AI systems through the Azure Responsible AI Workshop. 
+              <div class="achievement-content">
+                <p class="achievement-description">
+                  Stand a chance to coached others on building responsible AI systems through the Azure Responsible AI Workshop.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
-            <div class="testimonial-box">
-              <div class="author-test">
-                <img src="img/black.png" alt="" class="rounded-circle b-shadow-a">
-                <span class="author">President - DatAInspire</span>
+            
+            <div class="achievement-card">
+              <div class="achievement-author">
+                <img src="img/black.png" alt="DatAInspire President badge" class="achievement-badge">
+                <span class="achievement-title">President - DatAInspire</span>
               </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Led the University's AI & Data Science Club, fostering a community passionate about AI and data exploration. 
+              <div class="achievement-content">
+                <p class="achievement-description">
+                  Led the University's AI & Data Science Club, fostering a community passionate about AI and data exploration.
                 </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                <span class="achievement-quote"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <!--/ Achievements Section End /-->
 
-  <!--/ Section Blog Star /-->
-  <section id="blog" class="blog-mf sect-pt4 route">
+  <!--/ Blog Section Star /-->
+  <section id="blog" class="blog-section section-padding" aria-labelledby="blog-title">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Blogs
-            </h3>
-            <p class="subtitle-a">
-              Read and Explore my latest blogs related to Data Science.
-            </p>
-            <div class="line-mf"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-header">
+            <h2 class="section-title" id="blog-title">Blog</h2>
+            <p class="section-subtitle">Read and explore my latest blogs related to Data Science.</p>
+            <div class="section-divider"></div>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <!--blog 4-->
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="https://medium.com/@dilukshakaushal/introduction-to-azure-synapse-for-data-roles-in-the-data-field-a842d5b0e362" target="_blank" rel="noopener"><img src="img/synapse.jpg" alt="" class="img-fluid"></a>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <article class="blog-card">
+            <div class="blog-image">
+              <a href="https://medium.com/@dilukshakaushal/introduction-to-azure-synapse-for-data-roles-in-the-data-field-a842d5b0e362" target="_blank" rel="noopener" aria-label="Read Introduction to Azure Synapse for Data Roles blog post">
+                <img src="img/synapse.jpg" alt="Azure Synapse Analytics blog post cover" class="img-fluid" loading="lazy">
+              </a>
             </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Azure Synapse Analytics</h6>
-                </div>
+            <div class="blog-body">
+              <div class="blog-category">
+                <span class="category-tag">Azure Synapse Analytics</span>
               </div>
-              <h3 class="card-title">
-                <a href="https://medium.com/@dilukshakaushal/introduction-to-azure-synapse-for-data-roles-in-the-data-field-a842d5b0e362">Introduction to Azure Synapse for Data Roles in the Data Field</a></h3>
-              <p class="card-description">
+              <h3 class="blog-title">
+                <a href="https://medium.com/@dilukshakaushal/introduction-to-azure-synapse-for-data-roles-in-the-data-field-a842d5b0e362" target="_blank" rel="noopener">Introduction to Azure Synapse for Data Roles in the Data Field</a>
+              </h3>
+              <p class="blog-description">
                 Explore Azure Synapse Analytics and its powerful features for data integration, exploration, and analysis. Learn how it benefits data professionals in various roles.
               </p>
             </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/my2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Diluksha Perera</span>
+            <div class="blog-footer">
+              <div class="blog-author">
+                <a href="#" aria-label="View author profile">
+                  <img src="img/my2.jpg" alt="Diluksha Perera" class="author-avatar">
+                  <span class="author-name">Diluksha Perera</span>
                 </a>
               </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 4 min
+              <div class="blog-meta">
+                <span class="reading-time"><i class="ion-ios-clock-outline" aria-hidden="true"></i> 4 min</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!--blog 5-->
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="https://medium.com/@dilukshakaushal/empowering-data-engineers-and-scientists-azure-synapse-pyspark-notebooks-in-action-3cc81a6d44a0" target="_blank" rel="noopener"><img src="img/synapse2.jpg" alt="" class="img-fluid"></a>
+        <div class="col-lg-4 col-md-6">
+          <article class="blog-card">
+            <div class="blog-image">
+              <a href="https://medium.com/@dilukshakaushal/empowering-data-engineers-and-scientists-azure-synapse-pyspark-notebooks-in-action-3cc81a6d44a0" target="_blank" rel="noopener" aria-label="Read Empowering Data Engineers and Scientists blog post">
+                <img src="img/synapse2.jpg" alt="Azure Synapse PySpark Notebooks blog post cover" class="img-fluid" loading="lazy">
+              </a>
             </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Azure Synapse Analytics</h6>
-                </div>
+            <div class="blog-body">
+              <div class="blog-category">
+                <span class="category-tag">Azure Synapse Analytics</span>
               </div>
-              <h3 class="card-title">
-                <a href="https://medium.com/@dilukshakaushal/empowering-data-engineers-and-scientists-azure-synapse-pyspark-notebooks-in-action-3cc81a6d44a0">Empowering Data Engineers and Scientists: Azure Synapse PySpark Notebooks in Action</a></h3>
-              <p class="card-description">
+              <h3 class="blog-title">
+                <a href="https://medium.com/@dilukshakaushal/empowering-data-engineers-and-scientists-azure-synapse-pyspark-notebooks-in-action-3cc81a6d44a0" target="_blank" rel="noopener">Empowering Data Engineers and Scientists: Azure Synapse PySpark Notebooks in Action</a>
+              </h3>
+              <p class="blog-description">
                 Discover how Azure Synapse PySpark Notebooks empower data engineers and scientists to handle big data efficiently.
               </p>
             </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/my2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Diluksha Perera</span>
+            <div class="blog-footer">
+              <div class="blog-author">
+                <a href="#" aria-label="View author profile">
+                  <img src="img/my2.jpg" alt="Diluksha Perera" class="author-avatar">
+                  <span class="author-name">Diluksha Perera</span>
                 </a>
               </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 5 min
+              <div class="blog-meta">
+                <span class="reading-time"><i class="ion-ios-clock-outline" aria-hidden="true"></i> 5 min</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!--blog 1-->
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="https://medium.com/@dilukshakaushal/send-personalized-bulk-emails-with-attachments-in-power-automate-1f0bd9f18770" target="_blank" rel="noopener"><img src="img/auto.jpeg" alt="" class="img-fluid"></a>
+        <div class="col-lg-4 col-md-6">
+          <article class="blog-card">
+            <div class="blog-image">
+              <a href="https://medium.com/@dilukshakaushal/send-personalized-bulk-emails-with-attachments-in-power-automate-1f0bd9f18770" target="_blank" rel="noopener" aria-label="Read Send Personalized Bulk Emails with Attachments blog post">
+                <img src="img/auto.jpeg" alt="Power Automate bulk emails blog post cover" class="img-fluid" loading="lazy">
+              </a>
             </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Power Automate</h6>
-                </div>
+            <div class="blog-body">
+              <div class="blog-category">
+                <span class="category-tag">Power Automate</span>
               </div>
-              <h3 class="card-title">
-                <a href="https://medium.com/@dilukshakaushal/send-personalized-bulk-emails-with-attachments-in-power-automate-1f0bd9f18770">Send Personalized Bulk Emails with Attachments in Power Automate</a></h3>
-              <p class="card-description">
-                Learn how to Automate personalized bulk emails with attachments directly from your Excel sheet using Power Automate!
+              <h3 class="blog-title">
+                <a href="https://medium.com/@dilukshakaushal/send-personalized-bulk-emails-with-attachments-in-power-automate-1f0bd9f18770" target="_blank" rel="noopener">Send Personalized Bulk Emails with Attachments in Power Automate</a>
+              </h3>
+              <p class="blog-description">
+                Learn how to automate personalized bulk emails with attachments directly from your Excel sheet using Power Automate!
               </p>
             </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/my2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Diluksha Perera</span>
+            <div class="blog-footer">
+              <div class="blog-author">
+                <a href="#" aria-label="View author profile">
+                  <img src="img/my2.jpg" alt="Diluksha Perera" class="author-avatar">
+                  <span class="author-name">Diluksha Perera</span>
                 </a>
               </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 4 min
+              <div class="blog-meta">
+                <span class="reading-time"><i class="ion-ios-clock-outline" aria-hidden="true"></i> 4 min</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Blog Post 2 -->
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="https://medium.com/@dilukshakaushal/leverage-the-power-of-machine-learning-in-power-bi-bed990d0ede2" target="_blank" rel="noopener"><img src="img/pbi.jpeg" alt="" class="img-fluid"></a>
+        <div class="col-lg-4 col-md-6">
+          <article class="blog-card">
+            <div class="blog-image">
+              <a href="https://medium.com/@dilukshakaushal/leverage-the-power-of-machine-learning-in-power-bi-bed990d0ede2" target="_blank" rel="noopener" aria-label="Read Leverage the Power of Machine Learning in Power BI blog post">
+                <img src="img/pbi.jpeg" alt="Power BI Machine Learning blog post cover" class="img-fluid" loading="lazy">
+              </a>
             </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Web Design</h6>
-                </div>
+            <div class="blog-body">
+              <div class="blog-category">
+                <span class="category-tag">Power BI</span>
               </div>
-              <h3 class="card-title">
-                <a href="https://medium.com/@dilukshakaushal/leverage-the-power-of-machine-learning-in-power-bi-bed990d0ede2">Leverage the Power of Machine Learning in Power BI</a></h3>
-              <p class="card-description">
+              <h3 class="blog-title">
+                <a href="https://medium.com/@dilukshakaushal/leverage-the-power-of-machine-learning-in-power-bi-bed990d0ede2" target="_blank" rel="noopener">Leverage the Power of Machine Learning in Power BI</a>
+              </h3>
+              <p class="blog-description">
                 Understand how to leverage Power BI services to train and retrieve the Machine Learning models for the Power BI desktop.
               </p>
             </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/my2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Diluksha Perera</span>
+            <div class="blog-footer">
+              <div class="blog-author">
+                <a href="#" aria-label="View author profile">
+                  <img src="img/my2.jpg" alt="Diluksha Perera" class="author-avatar">
+                  <span class="author-name">Diluksha Perera</span>
                 </a>
               </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 6 min
+              <div class="blog-meta">
+                <span class="reading-time"><i class="ion-ios-clock-outline" aria-hidden="true"></i> 6 min</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Blog 3-->
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="https://dataexwithdk.blogspot.com/2023/05/Why%20Programming.html" target="_blank" rel="noopener"><img src="img/prgm.jpeg" alt="" class="img-fluid"></a>
+        <div class="col-lg-4 col-md-6">
+          <article class="blog-card">
+            <div class="blog-image">
+              <a href="https://dataexwithdk.blogspot.com/2023/05/Why%20Programming.html" target="_blank" rel="noopener" aria-label="Read Why Programming for Everyone blog post">
+                <img src="img/prgm.jpeg" alt="Programming for everyone blog post cover" class="img-fluid" loading="lazy">
+              </a>
             </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Programming?</h6>
-                </div>
+            <div class="blog-body">
+              <div class="blog-category">
+                <span class="category-tag">Programming</span>
               </div>
-              <h3 class="card-title"><a href="https://dataexwithdk.blogspot.com/2023/05/Why%20Programming.html" target="_blank" rel="noopener">Why programming for everyone?</a></h3>
-              <p class="card-description">
-                A comprehensive guide about why programming should be accessible to everyone, including beginners. 
+              <h3 class="blog-title">
+                <a href="https://dataexwithdk.blogspot.com/2023/05/Why%20Programming.html" target="_blank" rel="noopener">Why Programming for Everyone?</a>
+              </h3>
+              <p class="blog-description">
+                A comprehensive guide about why programming should be accessible to everyone, including beginners.
               </p>
             </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/my2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Diluksha Perera</span>
+            <div class="blog-footer">
+              <div class="blog-author">
+                <a href="#" aria-label="View author profile">
+                  <img src="img/my2.jpg" alt="Diluksha Perera" class="author-avatar">
+                  <span class="author-name">Diluksha Perera</span>
                 </a>
               </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 3 min
+              <div class="blog-meta">
+                <span class="reading-time"><i class="ion-ios-clock-outline" aria-hidden="true"></i> 3 min</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
-  <!--/ Section Blog End /-->
+  <!--/ Blog Section End /-->
 
-  <!--/ Section Contact-Footer Star /-->
-  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
+  <!--/ Contact Section Star /-->
+  <section class="contact-section section-padding" aria-labelledby="contact-title">
+    <div class="contact-background" style="background-image: url(img/overlay-bg.jpg)" role="img" aria-label="Contact background"></div>
+    <div class="contact-overlay"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="contact-mf">
-            <div id="contact" class="box-shadow-full">
-              <div class="row">
-                <!--
-                <div class="col-md-6">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                      Send Message
-                    </h5>
-                  </div>
-                  <div>
-                      <form action="" method="post" role="form" class="contactForm">
-                      <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
-                      <div class="row">
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                              <div class="validation"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="contact-card">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                <div class="contact-header">
+                  <h2 class="section-title" id="contact-title">Get in Touch</h2>
+                  <p class="contact-description">
+                    Let's connect! I'm always interested in connecting with folks who share a passion for data and technology. Feel free to reach out if you have any questions about my work or potential collaborations.
+                  </p>
                 </div>
-                -->
-                <div class="col-md-12">
-                  <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Get in Touch
-                    </h5>
-                  </div>
-                  <div class="more-info">
-                    <p class="lead"></p>
-                      Let's connect! I'm always interested in connecting with folks who share a passion for data and technology. Feel free to reach out if you have any questions about my work or potential collaborations.
-                    </p>
-                    <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span> Ratmalana, Colombo</li>
-                      <li><span class="ion-ios-telephone"></span> +94 77 1916256</li>
-                      <li><span class="ion-email"></span> 39-adc-0025@kdu.ac.lk</li>
-                      <li><span class="ion-email"></span> Diluksha.Perera@studentambassadors.com</li>
-                      <li><span class="ion-email"></span> Dilukshakaushal@gmail.com</li>
-                    </ul>
-                  </div>
-                  
+                
+                <div class="contact-info">
+                  <ul class="contact-list">
+                    <li class="contact-item">
+                      <i class="ion-ios-location" aria-hidden="true"></i>
+                      <span>Ratmalana, Colombo</span>
+                    </li>
+                    <li class="contact-item">
+                      <i class="ion-ios-telephone" aria-hidden="true"></i>
+                      <span>+94 77 1916256</span>
+                    </li>
+                    <li class="contact-item">
+                      <i class="ion-email" aria-hidden="true"></i>
+                      <span>39-adc-0025@kdu.ac.lk</span>
+                    </li>
+                    <li class="contact-item">
+                      <i class="ion-email" aria-hidden="true"></i>
+                      <span>Diluksha.Perera@studentambassadors.com</span>
+                    </li>
+                    <li class="contact-item">
+                      <i class="ion-email" aria-hidden="true"></i>
+                      <span>Dilukshakaushal@gmail.com</span>
+                    </li>
+                  </ul>
                 </div>
-                  <!--<div class="socials">
-                    <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-kaggle"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-medium"></i></span></a></li>
-                    </ul>
-                  </div>-->
-                  <div class="socials">
-                    <ul>
-                      <li><a href="https://www.linkedin.com/in/diluksha-perera-081a84226/" target="_blank" rel="noopener"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                      <li><a href="https://github.com/DK01git" target="_blank" rel="noopener"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                      <!--<li><a href="https://www.kaggle.com/wldkperera" target="_blank"><span class="ico-circle"><i class="ion-social-kaggle"></i></span></a></li>
-                      <li><a href="https://medium.com/@dilukshakaushal" target="_blank"><span class="ico-circle"><i class="ion-social-medium"></i></span></a></li>-->
-                    </ul>
-                  </div>
-                  
-                  
+                
+                <div class="social-links">
+                  <ul class="social-list">
+                    <li class="social-item">
+                      <a href="https://www.linkedin.com/in/diluksha-perera-081a84226/" target="_blank" rel="noopener" aria-label="Visit Diluksha Perera's LinkedIn profile">
+                        <i class="ion-social-linkedin" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="social-item">
+                      <a href="https://github.com/DK01git" target="_blank" rel="noopener" aria-label="Visit Diluksha Perera's GitHub profile">
+                        <i class="ion-social-github" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1189,19 +1181,14 @@
         </div>
       </div>
     </div>
-    <footer>
+    
+    <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="copyright-box">
+          <div class="col-12">
+            <div class="footer-content">
               <p class="copyright">&copy; Copyright <strong>DataFolio</strong>. All Rights Reserved</p>
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-                -->
+              <div class="footer-credits">
                 Designed by <a href="https://www.linkedin.com/in/diluksha-perera-081a84226/" target="_blank" rel="noopener">Diluksha Perera</a>
               </div>
             </div>
@@ -1210,10 +1197,15 @@
       </div>
     </footer>
   </section>
-  <!--/ Section Contact-footer End /-->
+  <!--/ Contact Section End /-->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top of page">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+  
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true"></div>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
@@ -1226,13 +1218,14 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/typed/typed.min.js"></script>
+  
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="js/main-modern.js"></script>
 
-  <!-- Add before closing body tag -->
+  <!-- ScrollReveal for animations -->
   <script src="https://unpkg.com/scrollreveal"></script>
 
 </body>
